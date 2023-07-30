@@ -1,8 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import * as fs from 'fs'
-import { PDFDocument } from 'pdf-lib'
 import * as PDFParse from 'pdf-parse'
-import * as path from 'path'
 
 @Injectable()
 export class EnergyBillService {
