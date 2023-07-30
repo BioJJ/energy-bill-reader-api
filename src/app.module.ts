@@ -4,6 +4,7 @@ import { AppService } from './app.service'
 import { EnergyBillModule } from './energy-bill/energy-bill.module'
 import { DatabaseModule } from './database/database.module'
 import { ConfigModule } from '@nestjs/config'
+import { UsersModule } from './users/users.module'
 import * as Joi from '@hapi/joi'
 
 @Module({
@@ -19,7 +20,8 @@ import * as Joi from '@hapi/joi'
 				POSTGRES_DB: Joi.string().required(),
 				PORT: Joi.number()
 			})
-		})
+		}),
+		UsersModule
 	],
 	controllers: [AppController],
 	providers: [AppService]
