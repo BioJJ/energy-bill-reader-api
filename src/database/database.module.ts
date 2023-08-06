@@ -16,12 +16,9 @@ import { User } from 'src/users/entities/user.entity'
 				username: configService.get('POSTGRES_USER'),
 				password: configService.get('POSTGRES_PASSWORD'),
 				database: configService.get('POSTGRES_DB'),
-				// url: configService.get('DATABASE_URL'),
-				entities: [EnergyBill, User]
-				// synchronize: true,
+				synchronize: true,
 				// logging: true,
-				// autoLoadEntities: true,
-				// ssl: { rejectUnauthorized: true }
+				entities: [EnergyBill, User]
 			})
 		})
 	]
